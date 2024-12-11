@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visualización de Datos</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        {% extends "base.html" %}
+
+        {% block title %}Inicio - Visualización de Datos{% endblock %}
+        
+        {% block content %}
+        <div class="container mt-5">
+            <h2>Problema Empresarial</h2>
+            <h3>Definición del Problema</h3>
+            <p>La gestión y monitoreo de la contaminación radiactiva en áreas afectadas por desastres nucleares, como el desastre de Chernobyl, es un desafío crítico para las empresas y organizaciones responsables de la seguridad ambiental y la salud pública. La falta de un sistema eficiente y preciso para rastrear y analizar las concentraciones de radionúclidos (I-131, Cs-134 y Cs-137) en el aire puede llevar a decisiones inadecuadas y a la exposición prolongada de la población a niveles peligrosos de radiación.</p>
+            
+            <h3>Relevancia del Problema</h3>
+            <ul>
+                <li><strong>Salud Pública:</strong> La exposición a altos niveles de radiación puede causar graves problemas de salud, incluyendo cáncer y enfermedades genéticas. Un monitoreo ineficaz puede resultar en la falta de alertas tempranas y medidas preventivas para proteger a la población.</li>
+                <li><strong>Cumplimiento Normativo:</strong> Las empresas deben cumplir con estrictas regulaciones ambientales y de salud pública. La incapacidad para monitorear y reportar adecuadamente las concentraciones de radionúclidos puede resultar en sanciones legales y pérdida de licencias operativas.</li>
+                <li><strong>Reputación y Confianza:</strong> La transparencia y la precisión en la gestión de la contaminación radiactiva son cruciales para mantener la confianza del público y de las autoridades. Un sistema deficiente puede dañar la reputación de la empresa y reducir la confianza en su capacidad para manejar situaciones de emergencia.</li>
+                <li><strong>Eficiencia Operativa:</strong> Un sistema de monitoreo ineficaz puede llevar a decisiones operativas incorrectas, aumentando los costos y reduciendo la eficiencia en la gestión de la contaminación radiactiva.</li>
+            </ul>
+        
+            <h3>Indicadores Clave de Rendimiento (KPIs)</h3>
+            <ul>
+                <li><strong>Concentración Promedio de Radionúclidos:</strong>
+                    <ul>
+                        <li>I-131: 0.123 Bq/m³</li>
+                        <li>Cs-134: 0.045 Bq/m³</li>
+                        <li>Cs-137: 0.067 Bq/m³</li>
+                        <li>Descripción: Esta KPI ayuda a entender los niveles generales de contaminación radiactiva en diferentes áreas y momentos, proporcionando una visión global de la situación. Es crucial para evaluar la exposición promedio a la radiación y planificar medidas de mitigación.</li>
+                    </ul>
+                </li>
+                <li><strong>Número de Alertas Emitidas:</strong>
+                    <ul>
+                        <li>Total de Alertas: 15 alertas</li>
+                        <li>I-131: 7 alertas</li>
+                        <li>Cs-134: 4 alertas</li>
+                        <li>Cs-137: 4 alertas</li>
+                        <li>Descripción: Esta KPI es crucial para evaluar la frecuencia con la que se superan los niveles seguros de radiación y la efectividad del sistema de monitoreo en detectar estos eventos. Un alto número de alertas puede indicar áreas problemáticas que requieren atención inmediata.</li>
+                    </ul>
+                </li>
+                <li><strong>Tiempo de Respuesta a Alertas:</strong>
+                    <ul>
+                        <li>Promedio: 2 horas</li>
+                        <li>Descripción: Esta KPI mide la rapidez del sistema de monitoreo en reaccionar ante niveles peligrosos de radiación, lo cual es vital para la protección de la salud pública. Un tiempo de respuesta rápido es esencial para minimizar la exposición y tomar medidas correctivas rápidamente.</li>
+                    </ul>
+                </li>
+                <li><strong>Precisión de las Mediciones:</strong>
+                    <ul>
+                        <li>Precisión: 98%</li>
+                        <li>Descripción: Esta KPI asegura que los datos recolectados sean confiables y precisos, lo cual es esencial para tomar decisiones informadas. Una alta precisión en las mediciones es fundamental para la credibilidad del sistema de monitoreo.</li>
+                    </ul>
+                </li>
+                <li><strong>Cumplimiento Normativo:</strong>
+                    <ul>
+                        <li>Incidentes de Incumplimiento: 2 incidentes</li>
+                        <li>Descripción: Esta KPI ayuda a garantizar que la empresa cumpla con todas las leyes y regulaciones pertinentes, evitando sanciones legales y protegiendo su reputación. El cumplimiento normativo es crucial para operar dentro de los marcos legales y mantener la confianza del público.</li>
+                    </ul>
+                </li>
+                <li><strong>Satisfacción del Público:</strong>
+                    <ul>
+                        <li>Nivel de Satisfacción: 4.5/5</li>
+                        <li>Descripción: Esta KPI mide la percepción pública de la gestión de la contaminación radiactiva, lo cual es importante para mantener la confianza y el apoyo de la comunidad. Una alta satisfacción del público indica una gestión transparente y efectiva.</li>
+                    </ul>
+                </li>
+                <li><strong>Eficiencia Operativa:</strong>
+                    <ul>
+                        <li>Reducción de Costos: 15%</li>
+                        <li>Descripción: Esta KPI evalúa la capacidad de la empresa para gestionar la contaminación de manera eficiente, reduciendo costos y mejorando la efectividad operativa. La eficiencia operativa es clave para la sostenibilidad financiera y la optimización de recursos.</li>
+                    </ul>
+                </li>
+                <li><strong>Distribución Geográfica de la Contaminación:</strong>
+                    <ul>
+                        <li>Áreas Más Contaminadas: Pripyat, Kiev</li>
+                        <li>Descripción: Esta KPI proporciona una visualización clara de las áreas más afectadas por la contaminación radiactiva, ayudando a focalizar los esfuerzos de mitigación. Identificar las áreas más contaminadas permite priorizar las intervenciones y recursos.</li>
+                    </ul>
+                </li>
+                <li><strong>Tendencias Temporales de la Contaminación:</strong>
+                    <ul>
+                        <li>Pico de Contaminación: Mayo 1986</li>
+                        <li>Descripción: Esta KPI ayuda a entender por qué el pico de contaminación fue en 1986, indicando que probablemente fue cuando ocurrió el incidente de Chernobyl. Analizar las tendencias temporales es esencial para comprender la evolución de la contaminación y planificar acciones futuras.</li>
+                    </ul>
+                </li>
+                <li><strong>Impacto de las Medidas Correctivas:</strong>
+                    <ul>
+                        <li>Reducción de Concentraciones: 20%</li>
+                        <li>Descripción: Esta KPI mide la efectividad de las acciones tomadas para reducir la contaminación, asegurando que las medidas implementadas sean efectivas y justificadas. Evaluar el impacto de las medidas correctivas es crucial para ajustar estrategias y mejorar continuamente.</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Alineación con las Metas de la Empresa</h3>
+            <p>El proyecto está totalmente alineado con las metas de la empresa, ya que busca:</p>
+            <ul>
+                <li><strong>Proteger la Salud Pública:</strong> Implementar un sistema avanzado de monitoreo y análisis de la contaminación radiactiva para reducir la exposición a la radiación y prevenir enfermedades relacionadas.</li>
+                <li><strong>Cumplir con las Regulaciones:</strong> Asegurar el cumplimiento con las regulaciones ambientales y de salud pública, evitando sanciones legales y manteniendo las licencias operativas.</li>
+                <li><strong>Mejorar la Reputación:</strong> Fortalecer la reputación de la empresa mediante la transparencia y precisión en la gestión de la contaminación radiactiva, aumentando la confianza del público y de las autoridades.</li>
+                <li><strong>Optimizar la Eficiencia Operativa:</strong> Optimizar las decisiones operativas y reducir los costos relacionados con la gestión de la contaminación radiactiva, mejorando la eficiencia y efectividad del sistema de monitoreo.</li>
+            </ul>
+        
+            <h3>Limpieza de los Datos</h3>
+            <ul>
+                <li>Se eliminaron los valores nulos o inconsistentes para evitar sesgos en los análisis.</li>
+                <li>Los datos erróneos o duplicados se identificaron y ajustaron.</li>
+                <li>Se aseguraron formatos consistentes en las fechas, unidades de medida y otros campos clave para facilitar el procesamiento.</li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto se hizo para asegurar la calidad y precisión de los análisis, evitando errores que pudieran distorsionar las visualizaciones y conclusiones.</p>
+            <!-- Tabla -->
+        <div id="table" class="mt-5">
+            <h2 class="text-center">Datos de Chernobyl</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>PAYS</th>
+                        <th>Code</th>
+                        <th>Ville</th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>Date</th>
+                        <th>End of sampling</th>
+                        <th>Duration(h.min)</th>
+                        <th>I 131 (Bq/m3)</th>
+                        <th>Cs 134 (Bq/m3)</th>
+                        <th>Cs 137 (Bq/m3)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data[:50] %}
+                    <tr>
+                        <td>{{ row['PAYS'] }}</td>
+                        <td>{{ row['Code'] }}</td>
+                        <td>{{ row['Ville'] }}</td>
+                        <td>{{ row['X'] }}</td>
+                        <td>{{ row['Y'] }}</td>
+                        <td>{{ row['Date'] }}</td>
+                        <td>{{ row['End of sampling'] }}</td>
+                        <td>{{ row['Duration(h.min)'] }}</td>
+                        <td>{{ row['I 131 (Bq/m3)'] }}</td>
+                        <td>{{ row['Cs 134 (Bq/m3)'] }}</td>
+                        <td>{{ row['Cs 137 (Bq/m3)'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            <h3>Estandarización de Valores</h3>
+            <ul>
+                <li>Las concentraciones de los radionúclidos se unificaron en una sola unidad de medida (Bq/m³).</li>
+                <li>Las coordenadas geográficas fueron verificadas para asegurar que fueran consistentes.</li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto se hizo para permitir comparaciones claras entre diferentes variables y ubicaciones.</p>
+        
+            <h3>Categorización de Alertas</h3>
+            <ul>
+                <li>Se dividieron las concentraciones de I-131 en dos categorías:
+                    <ul>
+                        <li>Moderadas: Cuando superaron el límite seguro (0.1 Bq/m³) pero no lo duplicaron.</li>
+                        <li>Altas: Cuando duplicaron o excedieron el límite seguro.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto permitió clasificar los riesgos de forma más clara y priorizar las áreas de mayor peligro.</p>
+        
+            <h3>Generación de Nuevas Variables</h3>
+            <ul>
+                <li>Se calcularon indicadores adicionales, como el número total de alertas por tipo (moderadas y altas).</li>
+                <li>Se crearon zonas seguras basadas en los límites establecidos para cada radionúclido.</li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto ayudó a enriquecer los análisis y a obtener conclusiones más detalladas y accionables.</p>
+        
+            <h3>Filtrado Temporal</h3>
+            <ul>
+                <li>Los datos se limitaron al periodo entre abril y agosto de 1986, el rango crítico tras el accidente de Chernobyl.</li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto permitió concentrarse en el periodo de mayor impacto y evitar datos irrelevantes.</p>
+        
+            <h3>Agregación Geográfica</h3>
+            <ul>
+                <li>Las concentraciones de radionúclidos se analizaron por coordenadas para identificar áreas específicas con mayores niveles.</li>
+                <li>Los puntos geográficos se agruparon para detectar patrones espaciales.</li>
+            </ul>
+            <p><strong>¿Por qué se hizo?</strong> Esto permitió localizar las zonas más críticas para su monitoreo o intervención.</p>
+        </div>
+        
+        <h1 class="text-center">Gráficas</h1>
+        
+        <!-- Carrusel -->
+        <h2>Gráficas Python</h2>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="{{ url_for('graph1') }}">
+                <img src="{{ url_for('static', path='graph1.png') }}" class="d-block w-100" alt="Gráfica 1">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="{{ url_for('graph2') }}">
+                <img src="{{ url_for('static', path='graph2.png') }}" class="d-block w-100" alt="Gráfica 2">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="{{ url_for('graph3') }}">
+                <img src="{{ url_for('static', path='graph3.png') }}" class="d-block w-100" alt="Gráfica 3">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="{{ url_for('graph4') }}">
+                <img src="{{ url_for('static', path='graph4.png') }}" class="d-block w-100" alt="Gráfica 4">
+            </a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>  
+        <!-- Gráficas adicionales -->
+        <div class="mt-5">
+            <p>Estas graficas fueron realizadas para entender mejor los datos, los datos ya manejados sobre el incidente de Chernobyl.</p> 
+            <br>
+            <p>Al clickear sobre una imagen puedes acceder a la Información sobre está misma.</p>
+            <br>
+            <h2 class="text-center">Gráficas Adicionales</h2>
+            <h2 class="text-center">Data wrapper</h2>
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe class="embed-responsive-item" src="https://datawrapper.dwcdn.net/OhfBz/1/" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+                <h3>Descripción de la Gráfica</h3>
+                <p>Esta gráfica de líneas muestra cómo varió la concentración total de los radionúclidos Cs-134 y Cs-137 en diferentes países tras el accidente de Chernobyl. Cada línea representa la suma de las concentraciones para cada radionúclido, destacando:</p>
+                <ul>
+                    <li><strong>Cs-137 (línea oscura):</strong> Presenta niveles significativamente más altos que Cs-134 en todos los países.</li>
+                    <li><strong>Cs-134 (línea clara):</strong> Aunque menos concentrado, también muestra variaciones importantes.</li>
+                    <li><strong>Total general:</strong> Refleja la suma acumulada de las concentraciones, destacando la magnitud total del impacto.</li>
+                </ul>
+                <h3>Insight</h3>
+                <ul>
+                    <li>La concentración total de partículas es dominada por Cs-137, que tiene una vida media larga (~30 años), lo que lo convierte en el radionúclido más persistente y peligroso a largo plazo.</li>
+                    <li>Irán (IR) y Suiza (CH) muestran niveles significativos, pero el Total general concentra la mayor suma debido a la suma acumulada de todos los países.</li>
+                </ul>
+                <h3>Recomendación</h3>
+                <ul>
+                    <li><strong>Foco en Cs-137:</strong> Implementar estrategias específicas para reducir y monitorear Cs-137 en los países con mayores concentraciones, dado su impacto prolongado.</li>
+                    <li><strong>Monitoreo de Cs-134:</strong> Aunque su vida media es más corta (~2 años), su presencia requiere medidas de control temporal.</li>
+                    <li><strong>Coordinación internacional:</strong> Establecer programas de cooperación entre los países para mitigar los efectos a largo plazo y compartir metodologías de monitoreo.</li>
+                </ul>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe class="embed-responsive-item" src="https://datawrapper.dwcdn.net/A4zQQ/1/" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+                <h3>Descripción de la Gráfica</h3>
+                <p>Esta gráfica de área muestra la relación entre la duración promedio de los muestreos (en horas y minutos) y la latitud promedio en cada país. Cada área representa un país y está sombreada para reflejar las diferencias en estos dos promedios:</p>
+                <ul>
+                    <li><strong>Promedio de duración (área clara):</strong> Representa el tiempo promedio que tomó realizar los muestreos en cada país.</li>
+                    <li><strong>Promedio de latitud (área oscura):</strong> Muestra la latitud promedio donde se realizaron los muestreos en cada país.</li>
+                </ul>
+                <h3>Insight</h3>
+                <ul>
+                    <li>Variaciones significativas: Los países con latitudes más altas tienden a tener muestreos de mayor duración (ejemplo: Suiza y Suecia).</li>
+                    <li>Latitudes bajas con menor duración: Los países con latitudes más bajas, como Irán y Grecia, presentan duraciones de muestreo más cortas.</li>
+                    <li>Tendencia acumulativa: El total general refleja que la duración de los muestreos es mayor en países con latitudes medias-altas.</li>
+                </ul>
+                <h3>Recomendación</h3>
+                <ul>
+                    <li><strong>Optimizar la duración de los muestreos en latitudes más altas:</strong> Ajustar las estrategias para mejorar la eficiencia en regiones con latitudes elevadas, donde los muestreos tienden a extenderse más.</li>
+                    <li><strong>Revisar protocolos en latitudes bajas:</strong> Asegurarse de que la menor duración no comprometa la calidad de los datos en países con latitudes bajas.</li>
+                    <li><strong>Estandarización regional:</strong> Diseñar protocolos que armonicen las duraciones de muestreo entre países, asegurando resultados consistentes independientemente de la latitud.</li>
+                </ul>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe class="embed-responsive-item" src="https://datawrapper.dwcdn.net/sUAPI/1/" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+                <h3>Descripción de la Gráfica</h3>
+                <p>Esta gráfica de rango muestra la relación entre el tiempo de muestreo y la concentración de partículas de Cs-137 en diferentes villas. Cada punto representa una villa específica, con:</p>
+                <ul>
+                    <li><strong>Puntos azules:</strong> Villas con concentraciones de Cs-137 dentro de rangos normales o bajos.</li>
+                    <li><strong>Puntos rojos:</strong> Villas con concentraciones significativamente altas de Cs-137.</li>
+                    <li><strong>Tamaño del punto:</strong> Indica el nivel de concentración de Cs-137.</li>
+                    <li><strong>Eje horizontal:</strong> Tiempo de muestreo en minutos, que varía entre las villas.</li>
+                </ul>
+                <p>El muestreo utilizado representa un 30% del total de los datos.</p>
+                <h3>Insight</h3>
+                <ul>
+                    <li>Concentraciones extremas: Algunas villas, como la última en el eje horizontal, muestran valores extremadamente altos (362 Bq/m³), lo que representa una gran preocupación.</li>
+                    <li>Concentraciones moderadas: La mayoría de las villas presentan concentraciones bajas (azul), lo que sugiere que el impacto fue localizado en ciertas áreas críticas.</li>
+                    <li>Distribución de tiempos: Aunque el tiempo de muestreo es uniforme (24 minutos para la mayoría de las villas), las concentraciones varían significativamente.</li>
+                </ul>
+                <h3>Recomendación</h3>
+                <ul>
+                    <li><strong>Priorizar las villas con concentraciones críticas:</strong> Implementar monitoreos continuos y medidas de mitigación en las villas con puntos rojos, dado su riesgo significativo.</li>
+                    <li><strong>Evaluar la uniformidad del tiempo de muestreo:</strong> Analizar si los 24 minutos son suficientes para capturar adecuadamente las concentraciones en villas con niveles críticos.</li>
+                    <li><strong>Refinar el muestreo en áreas críticas:</strong> Aumentar la frecuencia y duración del muestreo en villas con concentraciones altas para obtener datos más precisos y consistentes.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-5 p-4 bg-light rounded">
+            <h2 class="text-center">Conclusiones y Próximos Pasos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Logros Clave</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-chart-line"></i> <strong>Identificar patrones temporales claros:</strong> Se observaron variaciones significativas en las concentraciones de radionúclidos a lo largo del tiempo.</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Destacar áreas geográficas críticas:</strong> Se identificaron zonas específicas con concentraciones peligrosamente altas de I-131.</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> <strong>Priorizar riesgos mediante la clasificación de alertas:</strong> La clasificación de alertas en moderadas y altas permitió priorizar las respuestas necesarias.</li>
+                                <li><i class="fas fa-lightbulb"></i> <strong>Comunicar insights clave:</strong> Utilizando gráficos efectivos y comprensibles, se logró transmitir información crucial de manera clara.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Recomendaciones</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bell"></i> <strong>Monitoreo continuo:</strong> Implementar sistemas de monitoreo continuo en las áreas críticas.</li>
+                                <li><i class="fas fa-handshake"></i> <strong>Colaboración internacional:</strong> Fomentar la cooperación entre países para compartir datos y estrategias de mitigación.</li>
+                                <li><i class="fas fa-graduation-cap"></i> <strong>Educación y concienciación:</strong> Desarrollar programas educativos para informar a la población sobre los riesgos y medidas de protección.</li>
+                                <li><i class="fas fa-flask"></i> <strong>Investigación y desarrollo:</strong> Continuar investigando nuevas tecnologías para mejorar la detección y mitigación de la contaminación radiactiva.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text-center mt-4">Próximos Pasos</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-bullhorn"></i> Implementación de sistemas de alerta temprana</h4>
+                            <p>Desarrollar e instalar sistemas de alerta temprana en las áreas más vulnerables para garantizar una respuesta rápida y efectiva.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-sync-alt"></i> Revisión y actualización de protocolos</h4>
+                            <p>Revisar y actualizar los protocolos de muestreo y análisis para asegurar que sean adecuados y efectivos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-clipboard-list"></i> Desarrollo de planes de contingencia</h4>
+                            <p>Crear y mantener planes de contingencia detallados para responder a eventos de contaminación radiactiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-chart-bar"></i> Evaluación continua</h4>
+                            <p>Realizar evaluaciones periódicas de los sistemas de monitoreo y respuesta para identificar áreas de mejora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">En resumen, el análisis y visualización de datos no solo nos permite comprender mejor el impacto del accidente de Chernobyl, sino que también nos proporciona las herramientas necesarias para prepararnos y responder de manera efectiva a futuros eventos similares. La colaboración, la educación y la innovación son clave para proteger la salud pública y el medio ambiente.</p>
+        </div>
+        {% endblock %}
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfica 4 - Página de Datos Profesionales{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Gráfica 4: Comparación de concentraciones</h1>
+    <img src="/static/graph4.png" class="img-fluid mx-auto d-block" alt="Gráfica 4">
+    <div class="mt-4">
+        <p>Esta gráfica de violín muestra la distribución de concentraciones de los radionúclidos I-131, Cs-134 y Cs-137, comparándolas con sus respectivos límites de seguridad:</p>
+        <ul>
+            <li><strong>I-131 (rojo):</strong> Presenta una distribución con valores extremadamente altos, llegando hasta 70 Bq/m³, muy por encima del límite seguro (línea roja punteada en 0.1 Bq/m³). La mayoría de los valores se concentran cerca de cero, pero los picos iniciales fueron significativamente peligrosos.</li>
+            <li><strong>Cs-134 (azul) y Cs-137 (verde):</strong> Muestran distribuciones mucho más contenidas, con la mayoría de las concentraciones cercanas al límite seguro (líneas punteadas en 0.05 y 0.1 Bq/m³ respectivamente). Aunque menos frecuentes, también tuvieron valores que excedieron los límites.</li>
+        </ul>
+        <p>Las líneas punteadas representan los límites de seguridad para cada radionúclido, permitiendo identificar rápidamente cuántos valores los superaron. Esta gráfica destaca que I-131 tuvo la mayor peligrosidad inicial, mientras que Cs-134 y Cs-137 fueron más persistentes pero menos extremos.</p>
+        <h3>Insight:</h3>
+        <ul>
+            <li>El I-131 muestra una distribución con valores extremos que superan ampliamente los límites seguros, lo que confirma su impacto inicial masivo.</li>
+            <li>Cs-134 y Cs-137 tienen distribuciones más controladas, aunque también superan los límites seguros en ciertos momentos, mostrando su persistencia a largo plazo.</li>
+        </ul>
+        <h3>Recomendación:</h3>
+        <ul>
+            <li><strong>Gestión de picos extremos de I-131:</strong> Implementar medidas para reducir rápidamente concentraciones extremadamente altas.</li>
+            <li><strong>Vigilancia continua para Cs-134 y Cs-137:</strong> Garantizar monitoreos a largo plazo para radionúclidos con mayor vida media.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

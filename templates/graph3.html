@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfica 3 - Página de Datos Profesionales{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Gráfica 3: Concentración de Sr-90 a lo largo del tiempo</h1>
+    <img src="/static/graph3.png" class="img-fluid mx-auto d-block" alt="Gráfica 3">
+    <div class="mt-4">
+        <p>Esta gráfica de barras muestra el número total de alertas clasificadas según su nivel de riesgo tras el análisis de las concentraciones de I-131:</p>
+        <ul>
+            <li><strong>Alertas moderadas (naranja):</strong> Representan casos donde las concentraciones de I-131 superaron el límite seguro (0.1 Bq/m³), pero no duplicaron este valor. Estas alertas fueron menos frecuentes, con una cantidad significativamente menor en comparación con las alertas altas.</li>
+            <li><strong>Alertas altas (rojo):</strong> Indican niveles de concentración que duplicaron o excedieron el límite seguro, representando un riesgo crítico para la salud. Estas alertas constituyen la mayoría de los casos.</li>
+        </ul>
+        <p>La diferencia notable entre ambos tipos de alertas destaca la gravedad del impacto inicial del evento, con concentraciones peligrosamente altas en la mayoría de los casos. Esta información permite priorizar la respuesta ante escenarios similares en el futuro.</p>
+        <h3>Insight:</h3>
+        <ul>
+            <li>Más del 70% de las alertas emitidas fueron críticas (altas), lo que refleja que los niveles de concentración de I-131 superaron ampliamente los límites seguros en múltiples ocasiones.</li>
+            <li>Las alertas moderadas fueron significativamente menos frecuentes, indicando que el evento tuvo un impacto mayoritariamente severo.</li>
+        </ul>
+        <h3>Recomendación:</h3>
+        <ul>
+            <li><strong>Respuesta rápida para alertas críticas:</strong> Establecer un sistema de alerta temprana que permita actuar de manera inmediata en caso de niveles críticos.</li>
+            <li><strong>Investigación sobre fuentes:</strong> Identificar las causas o eventos específicos que llevaron a concentraciones tan elevadas para evitar repeticiones.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

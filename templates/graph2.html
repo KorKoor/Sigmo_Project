@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfica 2 - Página de Datos Profesionales{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Gráfica 2: Concentración de Cs-137 a lo largo del tiempo</h1>
+    <img src="/static/graph2.png" class="img-fluid mx-auto d-block" alt="Gráfica 2">
+    <div class="mt-4">
+        <p>Esta gráfica de dispersión muestra la distribución geográfica de las concentraciones del radionúclido I-131 en diferentes ubicaciones tras el accidente de Chernobyl. Cada punto representa una posición geográfica específica, destacando:</p>
+        <ul>
+            <li><strong>Color del punto:</strong> Indica la concentración de I-131.
+                <ul>
+                    <li><strong>Azul:</strong> Representa concentraciones bajas.</li>
+                    <li><strong>Rojo:</strong> Indica concentraciones altas, con valores que llegan hasta 70 Bq/m³.</li>
+                </ul>
+            </li>
+            <li><strong>Tamaño del punto:</strong> Refleja la intensidad de la concentración; los puntos más grandes corresponden a niveles más elevados.</li>
+        </ul>
+        <p>La mayor parte de las ubicaciones presentan concentraciones bajas a moderadas (colores azules), pero se observan áreas específicas con concentraciones significativamente altas (colores rojizos), lo que resalta zonas críticas para monitoreo. Este tipo de visualización facilita identificar patrones espaciales y priorizar intervenciones en regiones afectadas.</p>
+        <h3>Insight:</h3>
+        <ul>
+            <li>Las concentraciones de I-131 no están distribuidas uniformemente, sino que se concentran en áreas críticas, representadas por puntos rojos en la gráfica. Estas regiones muestran niveles peligrosos, mientras que la mayoría de las ubicaciones tienen niveles bajos o moderados.</li>
+        </ul>
+        <h3>Recomendación:</h3>
+        <ul>
+            <li><strong>Foco en áreas críticas:</strong> Priorizar intervenciones y monitoreos intensivos en las regiones donde los niveles de I-131 son más altos.</li>
+            <li><strong>Planes preventivos en zonas moderadas:</strong> Mantener vigilancia constante para evitar que los niveles suban en áreas actualmente seguras.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

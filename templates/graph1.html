@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfica 1 - Página de Datos Profesionales{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Gráfica 1: Concentración de I-131 a lo largo del tiempo</h1>
+    <img src="/static/graph1.png" class="img-fluid mx-auto d-block" alt="Gráfica 1">
+    <div class="mt-4">
+        <p>Esta gráfica de líneas muestra cómo evolucionaron las concentraciones de los radionúclidos I-131, Cs-134 y Cs-137 en la atmósfera tras el accidente de Chernobyl en 1986. Cada curva representa un radionúclido, destacando:</p>
+        <ul>
+            <li><strong>I-131 (rojo):</strong> Concentraciones iniciales muy altas, superando ampliamente los límites seguros, pero disminuyendo rápidamente debido a su corta vida media (~8 días).</li>
+            <li><strong>Cs-134 (azul) y Cs-137 (verde):</strong> Inicialmente más bajos que I-131, pero más persistentes en el tiempo debido a sus vidas medias más largas.</li>
+        </ul>
+        <p>Las líneas punteadas representan los límites de seguridad para cada radionúclido, y las zonas sombreadas indican niveles considerados seguros. En los primeros días tras el accidente, todos los radionúclidos estuvieron por encima de estos límites, indicando alto riesgo para la salud. Sin embargo, las concentraciones de I-131 se redujeron rápidamente, mientras que Cs-134 y Cs-137 mostraron una disminución más gradual.</p>
+        <h3>Insight:</h3>
+        <ul>
+            <li>El radionúclido I-131 presentó niveles iniciales extremadamente altos tras el accidente, superando significativamente los límites seguros. Sin embargo, disminuyó rápidamente debido a su corta vida media (~8 días).</li>
+            <li>Cs-134 y Cs-137 tuvieron niveles iniciales más bajos que I-131, pero fueron más persistentes en el tiempo, manteniéndose por encima de los límites seguros durante períodos más prolongados.</li>
+        </ul>
+        <h3>Recomendación:</h3>
+        <ul>
+            <li><strong>Monitoreo intensivo para I-131:</strong> Planificar acciones inmediatas para mitigar su impacto en los días iniciales tras un evento similar.</li>
+            <li><strong>Estrategias a largo plazo para Cs-134 y Cs-137:</strong> Implementar monitoreos regulares y estrategias sostenibles para gestionar radionúclidos más persistentes.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
